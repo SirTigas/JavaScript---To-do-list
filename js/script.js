@@ -6,7 +6,7 @@ function addTask(){
     // collecting the new task
     let taskName = document.getElementById('taskName').value;
     let taskDeadline = document.getElementById('taskDeadline').value;
-    // console.log(taskDeadline);
+    let msg = document.getElementById('msg');
 
     if(taskName != '' && taskDeadline != ''){
         // config the date of the criation of task
@@ -27,10 +27,10 @@ function addTask(){
         show()
 
         // return success msg
-        return document.getElementById('msg').innerHTML = "Task added successfuly";
+        return msg.innerHTML = "<p class='mt-3 text-success'>Task added successfully</p>";
     }
     // return error msg
-    return document.getElementById('msg').innerHTML = "You cannot add this task. Please, enter a valid task";
+    return msg.innerHTML = "<p class='mt-3 text-danger'>You cannot add this task. Please, enter a valid task</p>";
 }
 
 //remove a specific task
@@ -39,7 +39,7 @@ function remove(id){
     listTask.splice(taskRemove, 1);
     show()
 
-    return document.getElementById('msg').innerHTML = "Task removed successfuly";
+    return msg.innerHTML = "<p class='mt-3 text-danger'>Task removed successfully</p>";
 }
 
 //Displaying all tasks in the list
@@ -51,6 +51,7 @@ function show(){
 
     //Displaying list
     listTask.forEach((taskInfo, index) => {
-        document.getElementById('taskShow').innerHTML += `<tr> <td>${taskInfo.name}</td> <td>${taskInfo.created_at}</td> <td>${taskInfo.deadline}</td> <td>${taskInfo.status}</td> <td><button class="button-table" onclick="remove(${index})">REMOVE</button></td> </tr>`;
+        document.getElementById('taskShow').innerHTML += `<tr> <td>${taskInfo.name}</td> <td>${taskInfo.created_at}</td> <td>${taskInfo.deadline}</td> <td>${taskInfo.status}</td> <td><button class="btn btn-danger" onclick="remove(${index})"><i class="bi bi-trash-fill"></i> REMOVE</button></td> </tr>`;
     })
 }
+

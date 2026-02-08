@@ -1,5 +1,12 @@
-# 📝  TO DO List com JavaScript
+# 📝 To-Do List com JavaScript
 
-Este é um simples apenas para fixar conhecimentos na linguagem JavaScript a qual comecei estudar recentemente.
+Este é um projeto simples de **To-Do List** desenvolvido com **HTML, CSS e JavaScript**, criado com o objetivo de **fixar os conhecimentos iniciais em JavaScript**, linguagem que comecei a estudar recentemente.
 
-- Você pode acessar aqui: https://sirtigas.github.io/JavaScript---To-do-list/
+O projeto permite:
+- Adicionar novas tarefas
+- Definir prazos (deadline)
+- Visualizar todas as tarefas em uma lista organizada
+- Remover tarefas
+
+🔗 **Acesse o projeto online:**  
+https://sirtigas.github.io/JavaScript---To-do-list/
