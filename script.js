@@ -8,7 +8,7 @@ function addTask(){
     let taskDeadline = document.getElementById('taskDeadline').value;
     // console.log(taskDeadline);
 
-    if(taskName != ''){
+    if(taskName != '' && taskDeadline != ''){
         // config the date of the criation of task
         var task = {};
         let day = new Date().getDate()
